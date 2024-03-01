@@ -59,7 +59,7 @@ class Notifications extends BaseCommand
         \Config\Services::receiveEvents(
             function ($msg) {
                 file_put_contents(
-                    WRITEPATH.'/notifications'.ENVIRONMENT.'.log',
+                    WRITEPATH.'/notifications.log',
                     "Event received[".date('r')."]: ".$msg->getBody().PHP_EOL,
                     FILE_APPEND
                 );

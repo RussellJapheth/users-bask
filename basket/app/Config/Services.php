@@ -24,7 +24,6 @@ class Services extends BaseService
 {
     public static function sendEvent(string $message = "", string $group = "default"): void
     {
-
         $connection = new AMQPStreamConnection(
             $_ENV['MQ_HOST'],
             $_ENV['MQ_PORT'],
@@ -47,7 +46,7 @@ class Services extends BaseService
     public static function receiveEvents(callable $callback, string $group = "default")
     {
         $connection = new AMQPStreamConnection(
-            "127.0.0.1",
+            $_ENV['MQ_HOST'],
             $_ENV['MQ_PORT'],
             $_ENV['MQ_USER'],
             $_ENV['MQ_PASSWORD']
