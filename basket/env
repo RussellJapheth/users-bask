@@ -1,0 +1,7 @@
+
+CI_ENVIRONMENT = development
+
+MQ_HOST = "host.docker.internal"
+MQ_PORT = "5672"
+MQ_USER = "guest"
+MQ_PASSWORD = "guest"
