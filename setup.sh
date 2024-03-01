@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-cd basket
+# cd basket
 
-cp env .env
+cp basket/env basket/.env
 
-sudo chmod 777 ./writable -R # Needed on some systems to fix permission errors [NB: don't use 777 on an actual application 🫡]
+sudo chmod 777 ./basket/writable -R # Needed on some systems to fix permission errors [NB: don't use 777 on an actual application 🫡]
 
-cd ..
+# cd ..
 
 docker compose up -d --build
 
