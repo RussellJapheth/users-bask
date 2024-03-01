@@ -1,8 +1,8 @@
-# Users and Notifications Microservices with RabbitMQ
+# UsersBask
 
 ## Project Overview
 
-The project consists of two microservices:
+The project is built with `CodeIgniter 4` and consists of two microservices:
 
 ***Users Service:*** Provides an endpoint to create a new user and stores the information in a database or log file. Upon successful creation, it publishes an event to RabbitMQ.
 
