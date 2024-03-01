@@ -8,16 +8,20 @@ services:
       - ./basket:/var/www/html:rw
     ports:
       - 8080:80
-    networks:
-      - bubble-net
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    # networks:
+    #   - bubble-net
   
   rabbitmq:
     image: rabbitmq:3-management
     ports:
       - "15672:15672"
       - "5672:5672"
-    networks:
-      - bubble-net
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    # networks:
+    #   - bubble-net
 
-networks:
-  bubble-net:
+# networks:
+#   bubble-net:

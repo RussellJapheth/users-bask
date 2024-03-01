@@ -36,6 +36,8 @@ The project is built with `CodeIgniter 4` and consists of two microservices:
     # test.sh # Runs the unit tests
     ```
 
+    > NB: Depeding on your local configuration, the setup script might request for permission to update the permissions to the `basket/writable` folder.
+
 ### Usage
 
 Send a POST request to <http://localhost:8080/users> with the following JSON body:
